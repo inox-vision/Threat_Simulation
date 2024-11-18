@@ -7,11 +7,14 @@ This is a "does it even work?" part of story, where I try to discover real worth
 # Shortcuts
 
 - [TLDR - What's been done](#whats-been-done)
-***
+
+&nbsp;
+
 - [What is Caldera](#caldera)
-- [Endpoints setup](#setup)
+- [Endpoints](#setup)
 - [Initial Simulation](#initial-simulation)
 - [Configuring for Linux detection](#configuring-for-linux-detection)
+- [Email alerting](#alerting)
 
 
 # Caldera
@@ -149,8 +152,19 @@ These rules and decoder has been taken from  [Socfortress Wazuh-Rules repository
 ![wazuh-curl-detection](./imgs/wazuh-curl-detection1.jpg)
 ![wazuh-curl-detection](./imgs/wazuh-curl-detection2.jpg)
 
+# Alerting
 
+Wazuh has integrated various methods of alerting. I chose to receive e-mails whenever alert level 12 or higher is triggered.
 
+- created e-mail alias:
+![alerting mail](./imgs/wazuh-alerting-mail.jpg)
+
+- configured postfix relay (wazuh doesn't natively support SMTP server with authentication)
+- configured wazuh ossec.conf
+
+outcome:
+
+![wazuh e-mail alert](./imgs/wazuh-alerting.jpg)
 
 ***
 # What's been done
@@ -158,7 +172,8 @@ These rules and decoder has been taken from  [Socfortress Wazuh-Rules repository
 - deployed attacker and target endpoints in Proxmox homelab;
 - deployed MITRE Caldera server and Wazuh agents;
 - installed and configured audit loging in linux;
-- updated audit decoders and rules with [SOC Fortress set of rules](https://github.com/socfortress/Wazuh-Rules).
+- updated audit decoders and rules with [SOC Fortress set of rules](https://github.com/socfortress/Wazuh-Rules);
+- configured email alerting for level 12 or higher severity alerts;
 
 
 
