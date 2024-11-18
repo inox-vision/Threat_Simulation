@@ -6,6 +6,9 @@ This is a "does it even work?" part of story, where I try to discover real worth
 
 # Shortcuts
 
+- [TLDR - What's been done](#whats-been-done)
+***
+- [What is Caldera](#caldera)
 - [Endpoints setup](#setup)
 - [Initial Simulation](#initial-simulation)
 - [Configuring for Linux detection](#configuring-for-linux-detection)
@@ -148,38 +151,15 @@ These rules and decoder has been taken from  [Socfortress Wazuh-Rules repository
 
 
 
-# --------WIP--------------------
-
 
 ***
 # What's been done
 
-- client analysis;
-- physical and IT assets inventory;
-- IT assets topology;
-- vulnerability scanning with Nessus Essentials;
-- data flow analysis;
-- risk assessment based on CIS RAM framework;
-- network architecture has been rebuilt to address segmentation and isolate important assets
-- deployment and configuration of host-based firewall (OPNsense) on self built PC;
-- deployment and configuration of Debian based system with Wazuh SIEM software;
-- analysis and configuration of backup solutions within local and remote infrastructure;
-- deployment of real-time anti-malware solution on Linux machines;
-- deployment of firewall solution on Linux machines;
-- Full Disk Encryption on mobile working devices using VeraCrypt (for Windows) and Crypt-dm (for Linux);
-- configuration of Wireguard VPN for remote communication and management;
-- configuration of IDS/IPS on host-based firewall including ET PRO Telemetry;
-- smaller configuration tasks to address risk assessment results;
-- set up SSH keys for secure management;
-- creating dedicated contact form for security incidents and alerting;
-- training on social engineering attacks, data handling and security awareness;
-- configuring and training on safe methods for password creation and storage;
-
-![IT topology after changes](./imgs/diagrams/location-1-2.jpg)
+- deployed attacker and target endpoints in Proxmox homelab;
+- deployed MITRE Caldera server and Wazuh agents;
+- installed and configured audit loging in linux;
+- updated audit decoders and rules with [SOC Fortress set of rules](https://github.com/socfortress/Wazuh-Rules).
 
 
-# Findings
 
-In this chapter I'll be posting interesting events observed in SIEM,firewall or malware detection software.
-
-
+# --------WIP--------------------
