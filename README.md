@@ -15,6 +15,7 @@ This is a "does it even work?" part of story, where I try to discover real worth
 - [Initial Simulation](#initial-simulation)
 - [Configuring for Linux detection](#configuring-for-linux-detection)
 - [Email alerting](#alerting)
+- [Restrictin Linux user from executing commands](#restricting-user-from-executing-certain-commands)
 
 
 # Caldera
@@ -165,6 +166,16 @@ Wazuh has integrated various methods of alerting. I chose to receive e-mails whe
 outcome:
 
 ![wazuh e-mail alert](./imgs/wazuh-alerting.jpg)
+
+# Restricting user from executing certain commands
+
+Getting an alert might be handy if the user is supposed to use the command. But if the user shouldn't use thic command at all, restricting i might be a good idea. Ofcorse, this will break scripts that use these command, but if user should not use command, he probably shouldn't use these scripts too.
+
+![restricting command](./imgs/restricting%20command.jpg)
+
+### Outcome:
+
+![restricting outcome](./imgs/restricting%20command%20outcome.jpg)
 
 ***
 # What's been done
